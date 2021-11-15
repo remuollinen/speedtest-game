@@ -4,4 +4,22 @@
 	border-radius: 50%;
 	background-color: coral;
 	border: 2px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	cursor: pointer;
+	box-shadow: 0 0 2px black;
+}
+
+.lightblue {
+	background-color: lightblue;
+}
+
+.pink {
+	background-color: pink;
+}
+
+.lightgreen {
+	background-color: lightgreen;
 }
