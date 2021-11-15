@@ -21,6 +21,7 @@ h1 {
 }
 
 h3 {
+	margin: 1rem;
 	font-size: 2rem;
 }
 
@@ -47,4 +48,80 @@ button:hover {
 	justify-content: space-around;
 	width: 60vw;
 	margin: 3rem 0;
+}
+
+.circle {
+	height: 10rem;
+	width: 10rem;
+	border-radius: 50%;
+	background-color: coral;
+	border: 2px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	cursor: pointer;
+	box-shadow: 0 0 2px black;
+	color: white;
+}
+
+.lightblue {
+	background-color: lightblue;
+}
+
+.pink {
+	background-color: pink;
+}
+
+.lightgreen {
+	background-color: lightgreen;
+}
+
+.active-circle {
+	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='128' height='128' viewport='0 0 100 100' style='fill:black;font-size:100px;'><text y='80%' x='10%'>🦠</text></svg>")
+		no-repeat center center;
+}
+
+.needle-cursor {
+	cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='128' height='128' viewport='0 0 100 100' style='fill:black;font-size:80px;'><text y='50%'>💉</text></svg>")
+			16 16,
+		auto;
+}
+
+/* Game Over popup */
+
+.game-over-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.active {
+	display: flex;
+}
+
+.game-over-content {
+	width: 30%;
+	background-color: white;
+	border: 1px solid #222;
+	border-radius: 5px;
+	padding: 1rem;
+}
+
+.popup-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.close-btn {
+	margin: 1rem;
+	padding: 0.5rem;
+	font-size: 1rem;
 }
