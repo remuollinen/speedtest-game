@@ -95,6 +95,9 @@ export default class App extends Component {
 		return (
 			<div>
 				<h1>Kill the Virus!</h1>
+				<p>
+					Start the game and kill the virus by stabbing it with the syringe!
+				</p>
 				<h3>
 					Your score: <span>{this.state.score}</span>
 				</h3>

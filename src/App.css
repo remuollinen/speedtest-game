@@ -20,8 +20,9 @@ h1 {
 	font-size: 3rem;
 }
 
-h3 {
-	margin: 1rem;
+h3,
+p {
+	margin: 2rem;
 	font-size: 2rem;
 }
 
@@ -46,8 +47,7 @@ button:hover {
 .circle-container {
 	display: flex;
 	justify-content: space-evenly;
-	width: 60vw;
-	margin: 3rem 0;
+	margin: 3rem;
 }
 
 .circle {
@@ -61,12 +61,12 @@ button:hover {
 	align-items: center;
 	font-size: 2rem;
 	cursor: pointer;
-	box-shadow: 0 0 4px black;
+	box-shadow: 0 0 5px black;
 	color: white;
 }
 
 .circle:active {
-	box-shadow: inset 0 0 24px white;
+	box-shadow: inset 0 0 35px white;
 }
 
 .lightblue {
@@ -82,15 +82,11 @@ button:hover {
 }
 
 .active-circle {
-	/* background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='128' height='128' viewport='0 0 100 100' style='fill:black;font-size:100px;'><text y='80%' x='10%'>🦠</text></svg>")
-		no-repeat center center; */
-	background: url(./assets/images/virus.jpg) no-repeat center/cover;
+	background: url(./assets/images/virus-icon.svg) no-repeat center center/cover;
 }
 
 .needle-cursor {
-	cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='128' height='128' viewport='0 0 100 100' style='fill:black;font-size:90px;'><text y='50%'>💉</text></svg>")
-			16 16,
-		auto;
+	cursor: url(./assets/images/syringe.svg) 16 30, auto;
 }
 
 /* Game Over popup */
@@ -126,7 +122,5 @@ button:hover {
 }
 
 .close-btn {
-	margin: 1rem;
-	padding: 0.5rem;
 	font-size: 1rem;
 }
