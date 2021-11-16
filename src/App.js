@@ -13,16 +13,20 @@ export default class App extends Component {
 		score: 0,
 		current: 0,
 		showGameOver: false,
+		pace: 1500,
 	};
 
 	timer = undefined;
-	pace = 1500;
 
-	clickHandler = (number) => {
+	clickHandler = (id) => {
+		if (this.state.current !== id) {
+			this.stopHandler();
+			return;
+		}
+
 		this.setState({
 			score: this.state.score + 10,
 		});
-		console.log(number);
 	};
 
 	nextCircle = () => {
@@ -32,12 +36,11 @@ export default class App extends Component {
 			nextActive = getRandomInt(1, 4);
 		} while (nextActive === this.state.current);
 
-		this.setState({ current: nextActive });
-
-		this.pace *= 0.95;
-		this.timer = setTimeout(this.nextCircle, this.pace);
-
-		console.log(this.state.current);
+		this.setState({
+			current: nextActive,
+			pace: this.state.pace * 0.95,
+		});
+		this.timer = setTimeout(this.nextCircle, this.state.pace);
 	};
 
 	startHandler = () => {
@@ -46,7 +49,11 @@ export default class App extends Component {
 
 	stopHandler = () => {
 		clearTimeout(this.timer);
-		this.setState({ showGameOver: true });
+		this.setState({ showGameOver: true, current: 0 });
+	};
+
+	closeHandler = () => {
+		this.setState({ score: 0, showGameOver: false, pace: 1500 });
 	};
 
 	render() {
@@ -63,7 +70,7 @@ export default class App extends Component {
 								key={circle.id}
 								id={circle.id}
 								color={circle.color}
-								clickHandler={this.clickHandler}
+								clickHandler={() => this.clickHandler(circle.id)}
 								active={this.state.current === circle.id}
 							/>
 						);
@@ -75,6 +82,7 @@ export default class App extends Component {
 					<GameOver
 						score={this.state.score}
 						gameOver={this.state.showGameOver}
+						close={this.closeHandler}
 					/>
 				)}
 			</div>

@@ -6,10 +6,7 @@ const GameOver = (props) => {
 			<div className="game-over-content">
 				<div className="popup-header">
 					<h3>Game Over 😩</h3>
-					<button
-						className="close-btn"
-						onClick={() => window.location.reload()}
-					>
+					<button className="close-btn" onClick={props.close}>
 						X
 					</button>
 				</div>

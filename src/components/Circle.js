@@ -6,7 +6,7 @@ const Circle = (props) => {
 			className={`circle ${props.color} needle-cursor ${
 				props.active ? "active-circle" : ""
 			}`}
-			onClick={() => props.clickHandler(props.id)}
+			onClick={props.clickHandler}
 		>
 			{props.id}
 		</div>
