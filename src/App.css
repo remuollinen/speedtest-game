@@ -20,7 +20,9 @@ h1 {
 	font-size: 3rem;
 }
 
-h3 {
+h3,
+p {
+	margin: 2rem;
 	font-size: 2rem;
 }
 
@@ -44,7 +46,81 @@ button:hover {
 
 .circle-container {
 	display: flex;
-	justify-content: space-around;
-	width: 60vw;
-	margin: 3rem 0;
+	justify-content: space-evenly;
+	margin: 3rem;
+}
+
+.circle {
+	height: 10rem;
+	width: 10rem;
+	border-radius: 50%;
+	background-color: coral;
+	border: 2px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	cursor: pointer;
+	box-shadow: 0 0 5px black;
+	color: white;
+}
+
+.circle:active {
+	box-shadow: inset 0 0 35px white;
+}
+
+.lightblue {
+	background-color: lightblue;
+}
+
+.pink {
+	background-color: pink;
+}
+
+.lightgreen {
+	background-color: lightgreen;
+}
+
+.active-circle {
+	background: url(./assets/images/virus-icon.svg) no-repeat center center/cover;
+}
+
+.needle-cursor {
+	cursor: url(./assets/images/syringe.svg) 16 30, auto;
+}
+
+/* Game Over popup */
+
+.game-over-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.active {
+	display: flex;
+}
+
+.game-over-content {
+	width: 30%;
+	background-color: white;
+	border: 1px solid #222;
+	border-radius: 5px;
+	padding: 1rem;
+}
+
+.popup-header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.close-btn {
+	font-size: 1rem;
 }

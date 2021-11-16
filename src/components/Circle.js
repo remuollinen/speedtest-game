@@ -1,14 +1,14 @@
 import React from "react";
-import "./Circle.css";
 
 const Circle = (props) => {
 	return (
 		<div
-			className={`circle ${props.color}`}
-			onClick={() => props.clickHandler(props.id)}
-		>
-			{props.id}
-		</div>
+			style={{ pointerEvents: props.disabled ? "auto" : "none" }}
+			className={`circle ${props.color} needle-cursor ${
+				props.active ? "active-circle" : ""
+			}`}
+			onClick={props.clickHandler}
+		></div>
 	);
 };
 
