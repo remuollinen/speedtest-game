@@ -7,7 +7,7 @@
 - min 4 circles ✔
 - buttons to start the game and to stop the game ✔
 - 10p for each right move ✔
-- wrong move => 0p and game over
+- wrong move => 0p and game over ✔
 - score displayed above circles ✔
 - popup to say game over with the score ✔
 - when game starts, one circle randomly highlighted ✔
@@ -28,4 +28,7 @@
 
 ## Video
 
-![Video](video.gif)
+
+
+https://user-images.githubusercontent.com/75204814/142592732-a4a53231-87f6-4269-9392-b82a0cc65055.mov
+
