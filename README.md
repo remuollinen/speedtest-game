@@ -25,3 +25,7 @@
 - use an image as a highlight ✔
 - put sounds at least once when you click on the circle ✔
   - extra: game start and game over sounds ✔
+
+## Video
+
+![Video](video.gif)
