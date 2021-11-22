@@ -60,7 +60,6 @@ export default class App extends Component {
 			rounds: this.state.rounds + 1,
 		});
 		this.timer = setTimeout(this.nextCircle, this.state.pace);
-		console.log("round number", this.state.rounds);
 	};
 
 	startHandler = () => {
