@@ -124,3 +124,32 @@ button:hover {
 .close-btn {
 	font-size: 1rem;
 }
+
+@media screen and (max-width: 750px) {
+	h1 {
+		margin: 2rem;
+		font-size: 2rem;
+	}
+
+	h3,
+	p {
+		margin: 1rem;
+		font-size: 1rem;
+	}
+
+	.circle-container {
+		justify-content: space-between;
+		margin: 1.5rem;
+	}
+
+	.circle {
+		height: 5rem;
+		width: 5rem;
+		margin: 0 2.5rem;
+	}
+
+	button {
+		padding: 0.5rem;
+		font-size: 1.5rem;
+	}
+}
