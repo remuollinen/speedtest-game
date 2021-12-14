@@ -13,6 +13,9 @@ const GameOver = (props) => {
 				<h3>
 					Your score: <span>{props.score}</span>
 				</h3>
+				<h3>
+					{props.score > 100 ? `Well done!🔥` : `That's not good enough!😨`}
+				</h3>
 			</div>
 		</div>
 	);
